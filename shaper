@@ -1,0 +1,8 @@
+﻿#!/bin/sh
+
+if [ "$USER" != "root" ]; then
+        echo 'Must be root (sudo)'
+        exit 1
+fi
+
+python shaper.py $@
