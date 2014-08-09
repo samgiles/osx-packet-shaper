@@ -1,4 +1,4 @@
-﻿
+﻿#!/usr/bin/env python
  # Copyright (c) 2013 Samuel Giles
 
  # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,8 +22,15 @@
 import signal
 import sys
 import argparse
+import os
+
 from subprocess import call
 from pprint import pprint
+
+if os.getuid() is not 0:
+    print "Must be root: use sudo shaper.py"
+    sys.exit(1);
+
 
 parser = argparse.ArgumentParser(prog='shaper',description='Shape Mac OS X network traffic.')
 parser.add_argument('-d', dest='delay', type=int, help='The propagation delay', required=True)
