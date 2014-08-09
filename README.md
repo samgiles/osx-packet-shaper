@@ -5,7 +5,7 @@ Shapes packets on Mac OS X, useful for debugging network applications under diff
 ## Usage
 
 ```SHELL
-shaper [-h] -d DELAY -bw BANDWIDTH -pl PACKET_LOSS
+python shaper.py [-h] -d DELAY -bw BANDWIDTH -pl PACKET_LOSS
 arguments:
   -h, --help       show this help message and exit
   -d DELAY         The network propagation delay
